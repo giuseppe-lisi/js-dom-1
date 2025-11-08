@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Synthax Highlighter -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/base16/equilibrium-gray-dark.min.css" integrity="sha512-wN0TNNUSxgNsFx8SS7XmxSSzbAE+EI/rpqRMUM9aK0DoWel1McANaLp3ItYJwLDHcnZY6tQl6iUatWAJ83Pa4w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
@@ -14,27 +16,53 @@
 <body class="bg-dark text-white">
     <!-- Header -->
     <div class="container">
-        <div class="row my-5">
+        <div class="row my-4">
             <div class="col text-center">
-                <h1>Basi di Manipolazione del DOM</h1>
+                <h2>Basi di Manipolazione del DOM</h2>
             </div>
         </div>
     </div>
 
     <!-- Main -->
     <div class="container">
-        <div class="row my-5 align-items-center py-5">
+        <div class="row align-items-center py-4">
             <div class="col-6 text-center py-5">
                 <img src="./img/lightbulb_off.png" id="lightbulb" class="w-25">
             </div>
             <div class="col-6 py-5">
-                <h3>H3</h3>
-                <p>Paragrafo</p>
+                <h4>Utile dare l'impressione di una lampadina che si accende e spegne!</h4>
+                <p>
+                    Manipolando il DOM - Document Object Model - attraverso Javascript,
+                    possiamo cambiare lo stile e gli attributi degli elementi HTML
+                    contenuti all'interno della nostra pagina. Questo ci apre tantissime possibilità
+                    di customizzazione per quanto riguarda la visualizzazione dei nostri contenuti e
+                    rende le nostre pagine web sempre più dinamiche.
+                </p>
+                <p>
+                    Ad esempio in questo caso, <b>possiamo dare l'impressione di 
+                    una lampadina che si accende e spegne</b> attraverso un bottone che agisce da switch
+                    elettronico con poche righe di codice.
+                    <pre class="language-javascript">
+                        <code>
+lightSwitch.addEventListener("click", turnLightOnOrOff);
+                        </code>
+                    </pre>
+                </p>
                 <button class="btn btn-primary" id="lightSwitch">Accendi</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6 text-center py-5">
+
+            </div>
+            <div class="col-6 py-5">
+
             </div>
         </div>
     </div>
     <script src="main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
 </body>
 
 </html>
