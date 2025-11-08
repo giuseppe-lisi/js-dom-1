@@ -16,7 +16,7 @@
 <body class="bg-dark text-white">
     <!-- Header -->
     <div class="container">
-        <div class="row my-4">
+        <div class="row my-5">
             <div class="col text-center">
                 <h2>Basi di Manipolazione del DOM</h2>
             </div>
@@ -30,7 +30,7 @@
                 <img src="./img/lightbulb_off.png" id="lightbulb" class="w-25">
             </div>
             <div class="col-6 py-5">
-                <h4>Utile dare l'impressione di una lampadina che si accende e spegne!</h4>
+                <h4>Utile per dare l'impressione di una lampadina che si accende e spegne!</h4>
                 <p>
                     Manipolando il DOM - Document Object Model - attraverso Javascript,
                     possiamo cambiare lo stile e gli attributi degli elementi HTML
@@ -51,12 +51,46 @@ lightSwitch.addEventListener("click", turnLightOnOrOff);
                 <button class="btn btn-primary" id="lightSwitch">Accendi</button>
             </div>
         </div>
-        <div class="row">
+        <div class="row align-items-center py-5">
             <div class="col-6 text-center py-5">
-
+                <img src="./img/transistor_off.png" class="w-75 visually-hidden" id="transistorOn">
+                <img src="./img/transistor_on.png" class="w-75" id="transistorOff">
             </div>
             <div class="col-6 py-5">
-
+                <p>
+                    Sai cos'altro si può comportare come un interruttore?
+                    Il <b>transistor</b>!
+                </p>
+                <p>
+                    Il transistor è un dispositivo elettronico che permette di
+                    controllare il passaggio delle corrente dal pin detto "collector"
+                    al pin detto "emitter": questo avviene applicando una corrente
+                    cosiddetta di "bias" sulla base del transistor. 
+                </p>
+                <p>
+                    Quando il transistor non lavora in regione lineare attiva, e quindi
+                    solo nello stadio di interdizione o saturazione, agisce a tutti gli
+                    effetti come uno switch on/off elettronico. È proprio grazie a questo 
+                    dispositivo che sei in grado di cliccare i bottoni di questa pagina:
+                    i miliardi di transistor presenti nella tua CPU
+                    si accendono e spengono per tramutare il tuo input in un risultato 
+                    concreto visualizzabile a schermo.
+                </p>
+                <p>
+                    In questo caso, dopo vari strati di astrazione, saranno in grado di 
+                    cambiare l'immagine presente a schermo tramite una arrow function che fa
+                    da listener per l'evento 'click' sul bottone quì sotto... piuttosto
+                    incredibile a pensarci.
+                </p>
+                <pre>
+                    <code>
+transistorButton.addEventListener("click", () => {
+    transistorOnClassList.toggle("visually-hidden"); 
+    transistorOffClassList.toggle("visually-hidden");
+    })
+                    </code>
+                </pre>
+                <button class="btn btn-primary" id="transistorSwitch">Accendi e spegni il transistor</button>
             </div>
         </div>
     </div>
