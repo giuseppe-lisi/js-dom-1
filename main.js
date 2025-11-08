@@ -1,13 +1,16 @@
 let lightOn = "img/lightbulb_on.png";
 let lightOff = "img/lightbulb_off.png";
 let lightbulb = document.getElementById("lightbulb");
+let lightSwitch = document.getElementById("lightSwitch");
 
-function lightSwitch() {
+function turnLightOnOrOff() {
     if (lightbulb.getAttribute("src") == lightOn) {
         lightbulb.src = lightOff;
+        lightSwitch.innerHTML = "Accendi";
     } else {
         lightbulb.src = lightOn;
+        lightSwitch.innerHTML = "Spegni";
     }
 }
 
-lightbulb.addEventListener("click", lightSwitch);
+lightSwitch.addEventListener("click", turnLightOnOrOff);
